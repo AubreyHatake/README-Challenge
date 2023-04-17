@@ -18,18 +18,25 @@ const questions = ([
         type: "input",
         name: "userName",
         message: "What is your Github username?"
+    },
+    {
+        type: "input",
+        name: "license",
+        message: "What license do you want included in your README file?"
     }
 
 ])
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    console.log("Hello World!")
+    // console.log("Hello World!")
     inquirer.prompt(questions)
+    
 }
 
 // Function call to initialize app
