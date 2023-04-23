@@ -28,17 +28,18 @@ const questions = ([
         name: 'license'
     }
 
-]);
+])
 
-const genReadme = (data) => {
+
+const genReadme = (answers) => {
     return `
 # READEME.md Generator
 
-## my name is ${data.firstName} ${data.lastName}
+## my name is ${answers.firstName} ${answers.lastName}
 
-### The name of my project is  ${data.repoName}
+### The name of my project is  ${answers.repoName}
 
-### The type of licensing I will be using for thie project is ${data.license}
+### The type of licensing I will be using for thie project is ${answers.license}
     `
 }
 
@@ -53,13 +54,13 @@ function writeToFile(fileName, data) {
     });
 }
 
-
+// writeToFile();
 
 
 // TODO: Create a function to initialize app
 function init() {
     // console.log("Hello World!")
-    const userResponses = inquirer.prompt(questions)
+    const userResponses = inquirer.prompt(questions).then((answers) => {genReadme(answers)})
     
 
    
