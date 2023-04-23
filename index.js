@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const util = require('util');
 
 // TODO: Create an array of questions for user input
 const questions = ([
@@ -29,16 +30,39 @@ const questions = ([
 
 ]);
 
+const genReadme = (data) => {
+    return `
+# READEME.md Generator
+
+## my name is ${data.firstName} ${data.lastName}
+
+### The name of my project is  ${data.repoName}
+
+### The type of licensing I will be using for thie project is ${data.license}
+    `
+}
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('README.md', generateMarkdown(data))
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Success!")
+    });
 }
+
+
+
 
 // TODO: Create a function to initialize app
 function init() {
     // console.log("Hello World!")
-    inquirer.prompt(questions)
+    const userResponses = inquirer.prompt(questions)
     
+
+   
 }
 
 // Function call to initialize app
