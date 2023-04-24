@@ -36,24 +36,13 @@ const questions = [
   },
 ];
 
-// const genReadme = (answers) => {
-//     return `
-// # READEME.md Generator
 
-// ## my name is ${answers.firstName} ${answers.lastName}
-
-// ### The name of my project is  ${answers.repoName}
-
-// ### The type of licensing I will be using for thie project is ${answers.license}
-//     `
-// }
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// writeToFile();
 
 // TODO: Create a function to initialize app
 function init() {

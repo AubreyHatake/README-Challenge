@@ -17,11 +17,11 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// If there is no license, return an empty string, this function is accomplished on line 35 in the generateMarkdown function.
 function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// If there is no license, return an empty string, This function is also accomplished within the generateMarkdown function. 
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
