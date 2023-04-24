@@ -35,7 +35,6 @@ function generateMarkdown(answers) {
 ${answers.license !== "None" ? "- [License](#license)" : ""}
  - Contact
 
-  ## my name is ${answers.firstName} ${answers.lastName}
   
   ### The name of my project is  ${answers.repoName}
   
