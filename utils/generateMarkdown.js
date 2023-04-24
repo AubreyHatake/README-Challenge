@@ -26,8 +26,8 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  return `# ${answers.projectName}
-  # READEME.md Generator
+  return `# ${answers.projectName} by ${answers.userName}
+  # READEME
 
   ## Table of Contents
  - Installation
@@ -36,7 +36,7 @@ ${answers.license !== "None" ? "- [License](#license)" : ""}
  - Contact
 
   
-  ### The name of my project is  ${answers.repoName}
+  ### My github repo is ${answers.repoName}
   
   ${answers.license !== "None" ? "### License" : ""}
   ${answers.license !== "None" ? renderLicenseBadge(answers.license) : ""}
