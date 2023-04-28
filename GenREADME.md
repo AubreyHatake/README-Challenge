@@ -1,5 +1,5 @@
-# README Challenge
-  # READEME.md Generator
+# README generator by AubreyHatake
+  # READEME
 
   ## Table of Contents
  - Installation
@@ -8,7 +8,7 @@
  - Contact
 
   
-  ### The name of my project is  README
+  ### My github repo is README
   
   ### License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
